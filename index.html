@@ -5,63 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cacau Show - Delícias de Chocolate</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 class="logo">Cacau Show</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Promoções</a></li>
-                    <li><a href="#">Lojas</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo">
+                <img src="images/logo_cacau_show.png" alt="Logo Cacau Show">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <div class="container">
-                <h2>O sabor da felicidade em cada pedaço.</h2>
-                <p>Descubra a variedade de chocolates que preparamos para você.</p>
-                <a href="#" class="btn">Conheça nossos produtos</a>
+        <section id="home" class="hero">
+            <h1>Bem-vindo à Cacau Show!</h1>
+            <p>Onde cada chocolate conta uma história de sabor.</p>
+            <button id="verProdutosBtn">Ver Produtos</button>
+        </section>
+
+        <section id="produtos" class="produtos-destaque">
+            <h2>Nossos Produtos Mais Vendidos</h2>
+            <div class="galeria-produtos">
+                <div class="produto-item">
+                    <img src= "img/Footer-App-Desk.png" alt="Trufa Tradicional">
+                    <h3>Trufa Tradicional</h3>
+                    <p>Um clássico irresistível.</p>
+                    <span>R$ 3,50</span>
+                    <button class="adicionar-carrinho" data-produto="Trufa Tradicional" data-preco="3.50">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto-item">
+                    <img src="img/Lacreme_Desk.jpg" alt="Caixa de Bombons">
+                    <h3>Caixa de Bombons</h3>
+                    <p>Perfeita para presentear.</p>
+                    <span>R$ 49,90</span>
+                    <button class="adicionar-carrinho" data-produto="Caixa de Bombons" data-preco="49.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto-item">
+                    <img src="img/Bytes_Desk.png" alt="Barra de Chocolate">
+                    <h3>Barra de Chocolate 70% Cacau</h3>
+                    <p>Intenso e delicioso.</p>
+                    <span>R$ 15,00</span>
+                    <button class="adicionar-carrinho" data-produto="Barra de Chocolate 70% Cacau" data-preco="15.00">Adicionar ao Carrinho</button>
+                </div>
             </div>
         </section>
 
-        <section id="products">
-            <div class="container">
-                <h3>Nossos Produtos</h3>
-                <div id="product-list" class="product-grid">
-                    </div>
-                <button id="load-more-btn" class="btn load-more-btn">Ver Mais Produtos</button>
-            </div>
+        <section id="sobre" class="sobre-nos">
+            <h2>Nossa História</h2>
+            <p>Desde 1988, a Cacau Show encanta paladares com chocolates de alta qualidade e carinho em cada detalhe. Nossa missão é proporcionar momentos de felicidade através do sabor inigualável do chocolate.</p>
         </section>
 
-        <section id="about">
-            <div class="container">
-                <h3>Sobre a Cacau Show</h3>
-                <p>A Cacau Show é a maior rede de chocolates finos do mundo, com mais de 2.800 lojas no Brasil. Nascemos com a paixão por oferecer chocolates de alta qualidade, com ingredientes selecionados e um toque de carinho em cada criação. Venha se deliciar com nossos trufas, bombons, tabletes e presentes especiais.</p>
-            </div>
+        <section id="contato" class="contato">
+            <h2>Fale Conosco</h2>
+            <form id="contatoForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <div id="formMessage" class="hidden"></div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p> 2025 Cacau Show. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">YouTube</a>
-            </div>
+        <p>&copy; 2025 Cacau Show Clone. Todos os direitos reservados.</p>
+        <div class="carrinho-flutuante hidden" id="carrinhoFlutuante">
+            <h3>Seu Carrinho</h3>
+            <ul id="listaCarrinho">
+                </ul>
+            <p>Total: R$ <span id="totalCarrinho">0.00</span></p>
+            <button id="finalizarCompraBtn">Finalizar Compra</button>
+            <button id="fecharCarrinhoBtn">Fechar Carrinho</button>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-<html
+</html>

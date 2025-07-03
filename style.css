@@ -1,0 +1,347 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7f0e8; /* Cor de fundo suave */
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #5c2c06; /* Marrom escuro da Cacau Show */
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Dourado */
+}
+
+/* Seção Hero (Home) */
+.hero {
+    background-image: url('images/bg_chocolate.jpg'); /* Adicione uma imagem de fundo de chocolate */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+button {
+    background-color: #e67e22; /* Laranja da Cacau Show */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d35400; /* Laranja mais escuro */
+}
+
+/* Seção de Produtos */
+.produtos-destaque, .sobre-nos, .contato {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.produtos-destaque h2, .sobre-nos h2, .contato h2 {
+    text-align: center;
+    color: #5c2c06;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.galeria-produtos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.produto-item {
+    background-color: #fce4b6; /* Fundo creme/amarelo suave */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.produto-item:hover {
+    transform: translateY(-5px);
+}
+
+.produto-item img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.produto-item h3 {
+    color: #5c2c06;
+    margin-bottom: 10px;
+}
+
+.produto-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.produto-item span {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e67e22;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.produto-item button {
+    background-color: #28a745; /* Verde para adicionar ao carrinho */
+    padding: 10px 20px;
+}
+
+.produto-item button:hover {
+    background-color: #218838;
+}
+
+/* Sobre Nós */
+.sobre-nos p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contato */
+.contato form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5c2c06;
+}
+
+.contato input,
+.contato textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contato textarea {
+    resize: vertical;
+}
+
+.contato button {
+    align-self: flex-start;
+}
+
+.formMessage {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.formMessage.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.formMessage.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #5c2c06;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    position: relative; /* Para o carrinho flutuante */
+}
+
+/* Carrinho Flutuante */
+.carrinho-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.carrinho-flutuante h3 {
+    color: #5c2c06;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.carrinho-flutuante ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.carrinho-flutuante li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.carrinho-flutuante li span {
+    font-weight: bold;
+}
+
+.carrinho-flutuante p {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: right;
+    color: #e67e22;
+}
+
+.carrinho-flutuante button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#finalizarCompraBtn {
+    background-color: #28a745;
+}
+
+#fecharCarrinhoBtn {
+    background-color: #dc3545; /* Vermelho para fechar */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .galeria-produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto-item {
+        width: 80%;
+    }
+
+    .carrinho-flutuante {
+        width: 90%;
+        right: 5%;
+        left: 5%;
+        bottom: 10px;
+    }
+}
